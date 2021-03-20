@@ -1,0 +1,17 @@
+{% extends 'pieces/base.html' %}
+
+
+
+
+{% block content %}
+
+    {% for entry in entrys %}
+    <h2>{{entry.header}} </h2>
+    <h3>{{entry.detail}}</h3>
+    <h4>{{entry.date}}</h4>
+    <h5>{{entry.author}}</h5>
+    <hr>
+    {% endfor %}
+
+{% endblock %}
+

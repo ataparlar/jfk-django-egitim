@@ -1,0 +1,33 @@
+{% extends 'pieces/base.html' %}
+
+{% load static %}
+
+<img src="{% static 'img/mona.jpg' %}" alt="">
+
+
+{% block content %}
+
+    {% for board_member in board_members %}
+
+    <img src="{{board_member.img.url}}" style="width: 200px">
+    <h2>{{board_member.name}} {{board_member.surname}} </h2>
+    <h4>{{board_member.duty}}</h4>
+    <h4>{{board_member.year}}</h4>
+    <hr>
+
+    {% endfor %}
+
+
+        
+        {% for advisor in advisors %}
+
+        <img src="{{advisor.img.url}}" style="width: 200px">
+        <h2>{{advisor.degree}} {{advisor.name}} {{advisor.surname}} </h2>
+        <h4>{{advisor.year}}</h4>
+        <hr>
+
+        {% endfor %}
+
+
+{% endblock %}
+
